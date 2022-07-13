@@ -1,0 +1,264 @@
+/*
+*******************************************
+Template Name: Allegiant
+Author: Shinto kunjumon
+Date: 07-07-2022
+Template By: Vandalay Designs
+Copyright 2020-2021 Vandalay Business Solution
+
+* This file contains the styling for laonclaims.co.uk, this
+is the file you need to edit to change the look of the
+site.
+
+This files contents are outlined below >>>>
+
+*** SEARCH EACH SECTION AS IT COMMENTS, YOU WILL GET THE RIGHT SECTION.
+*******************************************
+
+============================================
+==== T A B L E   O F   C O N T E N T S =====
+============================================
+01 - Sass Variables
+02 - Sass Mixins
+03 - BODY 
+04 - HEADER 
+05 - SECTION 
+06 - FOOTER 
+07 - MODAL 
+08 - MEDIA QUERY
+
+============================================
+============================================
+
+*/
+
+/*================================================
+01 - Sass Variables
+==================================================*/
+
+// =======background colors========
+
+$background_color_1:#ffffff;
+$background_color_2:#03588b;
+$background_color_3:#7d519d;
+$background_color_4:#ffb100;
+
+
+
+// ======font styles===============
+
+$color_1:#ffffff;
+$color_2: #000;
+$color_3:#0087cd;
+$color_4:#75b456;
+
+
+
+$font_size_1:14px;
+$font_size_2:22px;
+$font_size_3:28px;
+$font_size_4:26px;
+$font_size_5:18px;
+$font_size_6:15px;
+$font_size_7:17px;
+$font_size_8:20px;
+
+$font-bold:bold;
+$font-w600:600;
+$font-w700:700;
+
+
+// ======border===========
+
+
+/*================================================
+02 - Sass Mixins
+==================================================*/
+
+/*================================================
+03 - BODY STYLES
+==================================================*/
+
+html {
+	scroll-behavior: smooth;	
+}
+$font_family_1: 'Poppins', sans-serif;
+$font_family_2: 'Ubuntu', sans-serif;
+$font_family_3: 'Open Sans', sans-serif;
+
+body {
+	font-family: $font_family_1 !important; 
+	font-size: 16px; 
+	line-height: 1.5; 
+	color: $color_2;
+	background-color: $background_color_1;
+}
+
+
+
+a{
+	cursor: pointer;
+}
+
+/*================================================
+04 -HEADER-SECTION
+==================================================*/
+
+header{
+	padding: 20px 0;
+	border-bottom: 1px solid rgb(131, 131, 131);
+	img{
+		height:80px;
+	}
+}
+
+
+
+/*================================================
+05 - BANNER SECTION
+==================================================*/
+.bnrsection{
+	img{
+		max-width: 100%;
+		width: 100%;
+	}
+	h1{
+		font-size: 30px;
+		margin: 30px 0 15px;
+		font-weight: 500;
+		color: $color_3;
+		span{
+			color: #122c3c;
+		}
+	}
+	h2{
+		font-weight: 700;
+		font-size: 36px;
+		margin: 30px 0 15px;
+		color: $color_3;
+	}
+	.formpart{
+		border: 1px solid #000;
+		border-radius: 8px;
+		padding: 20px;
+		background: #f5f5f5;
+		.form-control{
+			&:focus{
+				border-color: #86b7fe00;
+				box-shadow: 0 0 0 1px #00133085;
+			}
+		}
+		.form-check {
+			display: block;
+			padding: 0;
+			width: 45%;
+			width: 50%;
+    		margin: 2% auto;
+			float: none;
+			.form-check-label{
+			    background: #00adef;
+			    padding: 15px;
+			    width: 100%;
+			    color: #fff;
+		    }
+			.form-check-input[type="radio"], .form-check-input:checked[type="radio"]{
+				display: none;
+			}
+			.form-check-input:checked+.form-check-label{
+				background-color: #004e83;
+			}
+		}
+		fieldset {
+			border: 1px solid #8d8d8d !important;
+			padding: 8px 15px 15px !important;
+			margin: 0 0 !important;
+			border-radius: 5px;
+		
+			legend {
+				font-size: 17px !important;
+				font-weight: 500;
+				text-align: left;
+				width: auto !important;
+				padding: 0 10px;
+				margin: 0;
+				float: none;
+			}
+		}
+		.btn{
+			min-width: 200px;
+			padding: 10px 20px;
+			font-size: 20px;
+			margin-top: 20px;
+		}
+		#postaddrs2{
+			margin: 40px 0;
+		}
+		p{
+			margin: 10px 0;
+		}
+	}
+	
+}
+
+
+
+
+
+
+/*================================================
+07 - FOOTER
+==================================================*/
+footer{
+	padding: 20px 0;
+	margin: 40px 0 0;
+	background-color: #e2e2e2;
+	border-top: 2px solid rgb(107, 107, 107);
+}
+
+
+
+/*================================================
+09 - MEDIA QUERY
+==================================================*/
+$break-large: 1367px;
+$break-ipad-pro: 1024px;
+$break-min-ipad: 768px;
+$break-max-ipad: 991px;
+$break-min-tab: 577px;
+$break-max-tab: 767px;
+$break-mob: 576px;
+
+@media (min-width: 1200px){
+}
+@media screen and (min-width: $break-large) {
+	
+}
+@media screen and (max-width: $break-ipad-pro) {
+	
+}
+    
+@media (min-width:$break-min-ipad) and (max-width:$break-max-ipad) {
+
+}
+
+@media (min-width:$break-min-tab) and (max-width:$break-max-tab) {
+
+}
+
+@media screen and (max-width: $break-min-ipad) {
+	.bnrsection {
+		.formpart {
+			.form-check{
+				width: 100%;
+			}
+			.btn {
+				margin-top: 10px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $break-mob) {
+
+	
+}
